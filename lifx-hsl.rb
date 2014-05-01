@@ -41,7 +41,7 @@ light.set_color(LIFX::Color.hsl(options[:HUE], options[:saturation], options[:li
 sleep options[:duration]
 print("Color has changed\n")
 
-if options[:off]
+if options[:off] == 1
 	client.lights.turn_off
 end
 print("------------------------------------------------------\n")
