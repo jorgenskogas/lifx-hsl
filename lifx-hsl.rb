@@ -25,8 +25,9 @@ begin
 		c.lights.with_label(options[:name])
 	end
 	print("Bulb(#{options[:name]}) discovered\n")
-rescue
-	print("Couldnt find bulb(#{options[:name]})\n")
+rescue Exception => e
+	print("Could not find bulb(#{options[:name]})\n")
+	puts e.message
 	exit
 end
 
